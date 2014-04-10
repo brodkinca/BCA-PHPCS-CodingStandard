@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<ruleset name="BCA Coding Standard">
+
+  <description>CodeSniffer standard for use in BCA projects.</description>
+
+  <rule ref="PSR1"/>
+  <rule ref="PSR2"/>
+  <rule ref="PEAR">
+    <exclude name="PEAR.Commenting"/>
+    <exclude name="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket"/>
+    <exclude name="PEAR.Functions.FunctionCallSignature.CloseBracketLine"/>
+    <exclude name="Generic.Files.LineLength"/>
+  </rule>
+  <rule ref="Generic">
+    <exclude name="Generic.Files.LowercasedFilename.NotFound"/>
+    <exclude name="Generic.Functions.OpeningFunctionBraceKernighanRitchie"/>
+    <exclude name="Generic.Files.EndFileNoNewline"/>
+    <exclude name="Generic.Formatting.MultipleStatementAlignment.NotSameWarning"/>
+    <exclude name="Generic.Metrics"/>
+    <exclude name="Generic.PHP.ClosingPHPTag.NotFound"/>
+    <exclude name="Generic.PHP.UpperCaseConstant.Found"/>
+    <exclude name="Generic.WhiteSpace.DisallowSpaceIndent"/>
+  </rule>
+  <rule ref="Squiz.Arrays.ArrayBracketSpacing"/>
+  <rule ref="Squiz.Classes">
+    <exclude name="Squiz.Classes.ClassDeclaration.EndFileAfterCloseBrace"/>
+  </rule>
+  <rule ref="Squiz.CodeAnalysis"/>
+  <rule ref="Squiz.Commenting">
+    <exclude name="Squiz.Commenting.ClosingDeclarationComment"/>
+    <exclude name="Squiz.Commenting.FileComment.MissingSubpackageTag"/>
+    <exclude name="Squiz.Commenting.FileComment.IncorrectAuthor"/>
+    <exclude name="Squiz.Commenting.FileComment.IncorrectCopyright"/>
+    <exclude name="Squiz.Commenting.FileComment.IncorrectPackage"/>
+    <exclude name="Squiz.Commenting.FileComment.ShortFullStop"/>
+    <exclude name="Squiz.Commenting.LongConditionClosingComment.Missing"/>
+    <exclude name="Squiz.Commenting.FunctionComment.InvalidNoReturn"/>
+  </rule>
+  <rule ref="Squiz.ControlStructures"/>
+  <rule ref="Squiz.Formatting"/>
+  <rule ref="Squiz.Functions"/>
+  <rule ref="Squiz.NamingConventions">
+    <exclude name="Squiz.NamingConventions.ValidVariableName.NotCamelCaps"/>
+    <exclude name="Squiz.NamingConventions.ConstantCase.Found"/>
+  </rule>
+  <rule ref="Squiz.Objects"/>
+  <rule ref="Squiz.Operators">
+    <exclude name="Squiz.Operators.ComparisonOperatorUsage.ImplicitTrue"/>
+    <exclude name="Squiz.Operators.ComparisonOperatorUsage.NotAllowed"/>
+  </rule>
+  <rule ref="Squiz.PHP"/>
+  <rule ref="Squiz.Scope"/>
+  <rule ref="Squiz.Strings">
+    <exclude name="Squiz.Strings.ConcatenationSpacing.Missing"/>
+  </rule>
+  <rule ref="Squiz.WhiteSpace">
+    <exclude name="Squiz.WhiteSpace.FunctionSpacing"/>
+    <exclude name="Squiz.WhiteSpace.FunctionClosingBraceSpace.SpacingBeforeClose"/>
+    <exclude name="Squiz.WhiteSpace.ObjectOperatorSpacing.Before"/>
+    <!-- BUG: Disabling due to error when no space BEFORE var. -->
+    <exclude name="Squiz.WhiteSpace.MemberVarSpacing.After"/>
+  </rule>
+
+  <!-- Laravel-specific overrides -->
+  <rule ref="PSR1.Classes.ClassDeclaration.MissingNamespace">
+    <exclude-pattern>*/app/database/migrations/*</exclude-pattern>
+  </rule>
+  <rule ref="Squiz.Classes.ClassFileName.NoMatch">
+    <exclude-pattern>*/app/database/migrations/*</exclude-pattern>
+  </rule>
+  <rule ref="Internal.NoCodeFound">
+    <exclude-pattern>*/app/views/*</exclude-pattern>
+  </rule>
+  <rule ref="Squiz.Commenting.BlockComment.FirstLineIndent">
+    <exclude-pattern>*/app/config/*</exclude-pattern>
+    <exclude-pattern>*/app/lang/*</exclude-pattern>
+    <exclude-pattern>*/app/*.php</exclude-pattern>
+  </rule>
+  <rule ref="Squiz.Commenting.BlockComment.LineIndent">
+    <exclude-pattern>*/app/config/*</exclude-pattern>
+    <exclude-pattern>*/app/lang/*</exclude-pattern>
+    <exclude-pattern>*/app/*.php</exclude-pattern>
+  </rule>
+  <rule ref="Squiz.Commenting.BlockComment.NoCapital">
+    <exclude-pattern>*/app/config/*</exclude-pattern>
+    <exclude-pattern>*/app/lang/*</exclude-pattern>
+    <exclude-pattern>*/app/*.php</exclude-pattern>
+  </rule>
+
+</ruleset>

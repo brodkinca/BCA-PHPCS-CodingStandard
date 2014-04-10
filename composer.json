@@ -1,0 +1,16 @@
+{
+    "name": "bca/coding-standard",
+    "description": "PHP CodeSniffer standard for use in BCA projects.",
+    "require-dev": {
+        "phpunit/phpunit": "@stable",
+        "squizlabs/php_codesniffer": "@stable"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Brodkin CyberArts",
+            "email": "info@brodkinca.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
