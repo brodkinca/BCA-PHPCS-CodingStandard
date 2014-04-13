@@ -7,6 +7,8 @@
   <rule ref="PSR2"/>
   <rule ref="PEAR">
     <exclude name="PEAR.Commenting"/>
+    <exclude name="PEAR.NamingConventions.ValidFunctionName.PrivateNoUnderscore"/>
+    <exclude name="PEAR.NamingConventions.ValidVariableName.PrivateNoUnderscore"/>
     <exclude name="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket"/>
     <exclude name="PEAR.Functions.FunctionCallSignature.CloseBracketLine"/>
     <exclude name="Generic.Files.LineLength"/>
@@ -40,8 +42,10 @@
   <rule ref="Squiz.Formatting"/>
   <rule ref="Squiz.Functions"/>
   <rule ref="Squiz.NamingConventions">
-    <exclude name="Squiz.NamingConventions.ValidVariableName.NotCamelCaps"/>
     <exclude name="Squiz.NamingConventions.ConstantCase.Found"/>
+    <exclude name="Squiz.NamingConventions.ValidVariableName.NotCamelCaps"/>
+    <exclude name="Squiz.NamingConventions.ValidFunctionName.PrivateNoUnderscore"/>
+    <exclude name="Squiz.NamingConventions.ValidVariableName.PrivateNoUnderscore"/>
   </rule>
   <rule ref="Squiz.Objects"/>
   <rule ref="Squiz.Operators">
