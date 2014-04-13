@@ -59,11 +59,10 @@
     <exclude name="Squiz.WhiteSpace.FunctionSpacing"/>
     <exclude name="Squiz.WhiteSpace.FunctionClosingBraceSpace.SpacingBeforeClose"/>
     <exclude name="Squiz.WhiteSpace.ObjectOperatorSpacing.Before"/>
-
     <!-- BUG: Disabling due to error when no space BEFORE var. -->
     <exclude name="Squiz.WhiteSpace.MemberVarSpacing.After"/>
   </rule>
-<exclude name="Squiz.NamingConventions.ValidFunctionName.PrivateNoUnderscore"/>
+
   <!-- Laravel-specific overrides -->
   <rule ref="PSR1.Classes.ClassDeclaration.MissingNamespace">
     <exclude-pattern>*/app/database/migrations/*</exclude-pattern>
