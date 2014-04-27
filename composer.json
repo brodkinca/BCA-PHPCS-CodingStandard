@@ -1,9 +1,11 @@
 {
     "name": "bca/phpcs-standard",
     "description": "PHP CodeSniffer standard for use in BCA projects.",
-    "require-dev": {
-        "phpunit/phpunit": "@stable",
+    "require": {
         "squizlabs/php_codesniffer": "@stable"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "@stable"
     },
     "license": "MIT",
     "authors": [
