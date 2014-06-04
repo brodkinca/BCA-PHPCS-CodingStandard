@@ -38,7 +38,9 @@
     <exclude name="Squiz.Commenting.LongConditionClosingComment.Missing"/>
     <exclude name="Squiz.Commenting.FunctionComment.InvalidNoReturn"/>
   </rule>
-  <rule ref="Squiz.ControlStructures"/>
+  <rule ref="Squiz.ControlStructures">
+    <exclude name="Squiz.ControlStructures.ElseIfDeclaration.NotAllowed"/>
+  </rule>
   <rule ref="Squiz.Formatting"/>
   <rule ref="Squiz.Functions"/>
   <rule ref="Squiz.NamingConventions">
