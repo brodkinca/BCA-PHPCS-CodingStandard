@@ -22,6 +22,7 @@
     <exclude name="Generic.PHP.ClosingPHPTag.NotFound"/>
     <exclude name="Generic.PHP.UpperCaseConstant.Found"/>
     <exclude name="Generic.WhiteSpace.DisallowSpaceIndent"/>
+    <exclude name="Generic.Strings.UnnecessaryStringConcat.Found"/>
   </rule>
   <rule ref="Squiz.Arrays.ArrayBracketSpacing"/>
   <rule ref="Squiz.Classes">
