@@ -63,7 +63,7 @@
     <exclude name="Squiz.WhiteSpace.FunctionSpacing"/>
     <exclude name="Squiz.WhiteSpace.FunctionClosingBraceSpace.SpacingBeforeClose"/>
     <exclude name="Squiz.WhiteSpace.ObjectOperatorSpacing.Before"/>
-    <!-- BUG: Disabling due to error when no space BEFORE var. -->
+    <exclude name="Squiz.WhiteSpace.OperatorSpacing.NoSpaceBefore"/>
     <exclude name="Squiz.WhiteSpace.MemberVarSpacing.After"/>
   </rule>
 
