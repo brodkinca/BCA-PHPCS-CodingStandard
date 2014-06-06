@@ -22,6 +22,7 @@
     <exclude name="Generic.PHP.ClosingPHPTag.NotFound"/>
     <exclude name="Generic.PHP.UpperCaseConstant.Found"/>
     <exclude name="Generic.WhiteSpace.DisallowSpaceIndent"/>
+    <exclude name="Generic.Strings.UnnecessaryStringConcat.Found"/>
   </rule>
   <rule ref="Squiz.Arrays.ArrayBracketSpacing"/>
   <rule ref="Squiz.Classes">
@@ -63,7 +64,7 @@
     <exclude name="Squiz.WhiteSpace.FunctionSpacing"/>
     <exclude name="Squiz.WhiteSpace.FunctionClosingBraceSpace.SpacingBeforeClose"/>
     <exclude name="Squiz.WhiteSpace.ObjectOperatorSpacing.Before"/>
-    <!-- BUG: Disabling due to error when no space BEFORE var. -->
+    <exclude name="Squiz.WhiteSpace.OperatorSpacing.NoSpaceBefore"/>
     <exclude name="Squiz.WhiteSpace.MemberVarSpacing.After"/>
   </rule>
 
