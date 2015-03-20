@@ -31,6 +31,7 @@
   <rule ref="Generic.CodeAnalysis"/>
   <rule ref="Squiz.Commenting">
     <exclude name="Squiz.Commenting.ClosingDeclarationComment"/>
+    <exclude name="Squiz.Commenting.FileComment.Missing"/>
     <exclude name="Squiz.Commenting.FileComment.MissingSubpackageTag"/>
     <exclude name="Squiz.Commenting.FileComment.IncorrectAuthor"/>
     <exclude name="Squiz.Commenting.FileComment.IncorrectCopyright"/>
@@ -67,6 +68,12 @@
     <exclude name="Squiz.WhiteSpace.OperatorSpacing.NoSpaceBefore"/>
     <exclude name="Squiz.WhiteSpace.MemberVarSpacing.After"/>
   </rule>
+  <rule ref="BCA.Commenting.FileComment.Missing">
+    <exclude-pattern>*/views/*</exclude-pattern>
+  </rule>
+  <rule ref="Internal.NoCodeFound">
+    <exclude-pattern>*/views/*</exclude-pattern>
+  </rule>
 
   <!-- Laravel-specific overrides -->
   <rule ref="PSR1.Classes.ClassDeclaration.MissingNamespace">
@@ -74,9 +81,6 @@
   </rule>
   <rule ref="Squiz.Classes.ClassFileName.NoMatch">
     <exclude-pattern>*/app/database/migrations/*</exclude-pattern>
-  </rule>
-  <rule ref="Internal.NoCodeFound">
-    <exclude-pattern>*/app/views/*</exclude-pattern>
   </rule>
   <rule ref="Squiz.Commenting.BlockComment.FirstLineIndent">
     <exclude-pattern>*/app/config/*</exclude-pattern>
@@ -91,6 +95,12 @@
   <rule ref="Squiz.Commenting.BlockComment.NoCapital">
     <exclude-pattern>*/app/config/*</exclude-pattern>
     <exclude-pattern>*/app/lang/*</exclude-pattern>
+    <exclude-pattern>*/app/*.php</exclude-pattern>
+  </rule>
+  <rule ref="Generic.Files.InlineHTML.Found">
+    <exclude-pattern>*/app/*.blade.php</exclude-pattern>
+  </rule>
+  <rule ref="Generic.PHP.CharacterBeforePHPOpeningTag.Found">
     <exclude-pattern>*/app/*.php</exclude-pattern>
   </rule>
 
