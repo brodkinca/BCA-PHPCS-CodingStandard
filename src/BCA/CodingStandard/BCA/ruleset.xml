@@ -7,6 +7,7 @@
   <rule ref="PSR2"/>
   <rule ref="PEAR">
     <exclude name="PEAR.Commenting"/>
+    <exclude name="PEAR.NamingConventions.ValidFunctionName.PublicUnderscore"/>
     <exclude name="PEAR.NamingConventions.ValidFunctionName.PrivateNoUnderscore"/>
     <exclude name="PEAR.NamingConventions.ValidVariableName.PrivateNoUnderscore"/>
     <exclude name="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket"/>
@@ -48,6 +49,7 @@
   <rule ref="Squiz.NamingConventions">
     <exclude name="Squiz.NamingConventions.ConstantCase.Found"/>
     <exclude name="Squiz.NamingConventions.ValidVariableName.NotCamelCaps"/>
+    <exclude name="Squiz.NamingConventions.ValidFunctionName.PublicUnderscore"/>
     <exclude name="Squiz.NamingConventions.ValidFunctionName.PrivateNoUnderscore"/>
     <exclude name="Squiz.NamingConventions.ValidVariableName.PrivateNoUnderscore"/>
   </rule>
@@ -73,6 +75,14 @@
   </rule>
   <rule ref="Internal.NoCodeFound">
     <exclude-pattern>*/views/*</exclude-pattern>
+  </rule>
+
+  <!-- Test case overrides -->
+  <rule ref="PSR2.Methods.MethodDeclaration.Underscore">
+    <exclude-pattern>*/tests/*</exclude-pattern>
+  </rule>
+  <rule ref="Generic.Classes.DuplicateClassName.Found">
+    <exclude-pattern>*/tests/*</exclude-pattern>
   </rule>
 
   <!-- Laravel-specific overrides -->
