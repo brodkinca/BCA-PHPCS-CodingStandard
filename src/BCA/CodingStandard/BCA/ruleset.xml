@@ -28,7 +28,7 @@
   <rule ref="Squiz.Classes">
     <exclude name="Squiz.Classes.ClassDeclaration.EndFileAfterCloseBrace"/>
   </rule>
-  <rule ref="Squiz.CodeAnalysis"/>
+  <rule ref="Generic.CodeAnalysis"/>
   <rule ref="Squiz.Commenting">
     <exclude name="Squiz.Commenting.ClosingDeclarationComment"/>
     <exclude name="Squiz.Commenting.FileComment.MissingSubpackageTag"/>
