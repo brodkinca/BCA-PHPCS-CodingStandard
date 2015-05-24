@@ -2,15 +2,19 @@
 /**
  * Prepares suite for testing.
  *
- * @package   bca/coding-standard
- * @author    Brodkin CyberArts <info@brodkinca.com>
- * @copyright 2015 Brodkin CyberArts
+ * @package    squizlabs/php_codesniffer
+ * @subpackage bca/coding-standard
+ * @author     Brodkin CyberArts <info@brodkinca.com>
+ * @copyright  2015 Brodkin CyberArts
  */
 
 namespace BCA\Sniffs\Commenting;
 
 use \PHP_CodeSniffer_File;
 
+/**
+ * Check file and class comments.
+ */
 class FileCommentSniff implements \PHP_CodeSniffer_Sniff
 {
 
@@ -19,10 +23,10 @@ class FileCommentSniff implements \PHP_CodeSniffer_Sniff
      *
      * @var array
      */
-    public $supportedTokenizers = array(
-                                   'PHP',
-                                   'JS',
-                                  );
+    public $supportedTokenizers = [
+     'PHP',
+     'JS',
+    ];
 
 
     /**
@@ -32,7 +36,7 @@ class FileCommentSniff implements \PHP_CodeSniffer_Sniff
      */
     public function register()
     {
-        return array(T_OPEN_TAG);
+        return [T_OPEN_TAG];
 
     }//end register()
 
@@ -41,10 +45,10 @@ class FileCommentSniff implements \PHP_CodeSniffer_Sniff
      * Processes this test, when one of its tokens is encountered.
      *
      * @param PHP_CodeSniffer_File $phpcsFile The file being scanned.
-     * @param int                  $stackPtr  The position of the current token
-     *                                        in the stack passed in $tokens.
+     * @param integer              $stackPtr  The position of the current token
+     *                                    in the stack passed in $tokens.
      *
-     * @return int
+     * @return integer
      */
     public function process(PHP_CodeSniffer_File $phpcsFile, $stackPtr)
     {
@@ -77,21 +81,21 @@ class FileCommentSniff implements \PHP_CodeSniffer_Sniff
         }
 
         // Required tags in correct order.
-        $required = array(
-                     '@package'    => true,
-                     '@subpackage' => true,
-                     '@author'     => true,
-                     '@copyright'  => true,
-                    );
+        $required = [
+         '@package'    => true,
+         '@subpackage' => false,
+         '@author'     => true,
+         '@copyright'  => true,
+        ];
 
-        $foundTags = array();
+        $foundTags = [];
         foreach ($tokens[$commentStart]['comment_tags'] as $tag) {
             $name       = $tokens[$tag]['content'];
             $isRequired = isset($required[$name]);
 
             if ($isRequired === true && in_array($name, $foundTags) === true) {
                 $error = 'Only one %s tag is allowed in a file comment';
-                $data  = array($name);
+                $data  = [$name];
                 $phpcsFile->addError($error, $tag, 'Duplicate'.ucfirst(substr($name, 1)).'Tag', $data);
             }
 
@@ -104,7 +108,7 @@ class FileCommentSniff implements \PHP_CodeSniffer_Sniff
             $string = $phpcsFile->findNext(T_DOC_COMMENT_STRING, $tag, $commentEnd);
             if ($string === false || $tokens[$string]['line'] !== $tokens[$tag]['line']) {
                 $error = 'Content missing for %s tag in file comment';
-                $data  = array($name);
+                $data  = [$name];
                 $phpcsFile->addError($error, $tag, 'Empty'.ucfirst(substr($name, 1)).'Tag', $data);
                 continue;
             }
@@ -123,7 +127,7 @@ class FileCommentSniff implements \PHP_CodeSniffer_Sniff
                     $error = 'Expected "xxxx[-xxxx] Brodkin CyberArts" for copyright declaration';
                     $fix   = $phpcsFile->addFixableError($error, $tag, 'IncorrectCopyright');
                     if ($fix === true) {
-                        $matches = array();
+                        $matches = [];
                         preg_match('/^(([0-9]{4})(-[0-9]{4})?)?.*$/', $tokens[$string]['content'], $matches);
                         if (isset($matches[1]) === false) {
                             $matches[1] = date('Y');
@@ -141,7 +145,7 @@ class FileCommentSniff implements \PHP_CodeSniffer_Sniff
         foreach ($required as $tag => $true) {
             if (in_array($tag, $foundTags) === false) {
                 $error = 'Missing %s tag in file comment';
-                $data  = array($tag);
+                $data  = [$tag];
                 $phpcsFile->addError($error, $commentEnd, 'Missing'.ucfirst(substr($tag, 1)).'Tag', $data);
             }
 
@@ -151,10 +155,10 @@ class FileCommentSniff implements \PHP_CodeSniffer_Sniff
 
             if ($foundTags[$pos] !== $tag) {
                 $error = 'The tag in position %s should be the %s tag';
-                $data  = array(
-                          ($pos + 1),
-                          $tag,
-                         );
+                $data  = [
+                  ($pos + 1),
+                  $tag,
+                 ];
                 $phpcsFile->addError($error, $tokens[$commentStart]['comment_tags'][$pos], ucfirst(substr($tag, 1)).'TagOrder', $data);
             }
 
@@ -165,6 +169,4 @@ class FileCommentSniff implements \PHP_CodeSniffer_Sniff
         return ($phpcsFile->numTokens + 1);
 
     }//end process()
-
-
 }//end class
