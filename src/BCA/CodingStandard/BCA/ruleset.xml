@@ -15,6 +15,7 @@
     <exclude name="Generic.Files.LineLength"/>
   </rule>
   <rule ref="Generic">
+    <exclude name="Generic.Arrays.DisallowShortArraySyntax.Found"/>
     <exclude name="Generic.Files.LowercasedFilename.NotFound"/>
     <exclude name="Generic.Functions.OpeningFunctionBraceKernighanRitchie"/>
     <exclude name="Generic.Files.EndFileNoNewline"/>
