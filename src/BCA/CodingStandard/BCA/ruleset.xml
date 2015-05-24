@@ -6,25 +6,26 @@
   <rule ref="PSR1"/>
   <rule ref="PSR2"/>
   <rule ref="PEAR">
+    <exclude name="Generic.Files.LineLength"/>
     <exclude name="PEAR.Commenting"/>
     <exclude name="PEAR.NamingConventions.ValidFunctionName.PublicUnderscore"/>
     <exclude name="PEAR.NamingConventions.ValidFunctionName.PrivateNoUnderscore"/>
     <exclude name="PEAR.NamingConventions.ValidVariableName.PrivateNoUnderscore"/>
     <exclude name="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket"/>
     <exclude name="PEAR.Functions.FunctionCallSignature.CloseBracketLine"/>
-    <exclude name="Generic.Files.LineLength"/>
   </rule>
   <rule ref="Generic">
     <exclude name="Generic.Arrays.DisallowShortArraySyntax.Found"/>
+    <exclude name="Generic.Files.EndFileNoNewline"/>
     <exclude name="Generic.Files.LowercasedFilename.NotFound"/>
     <exclude name="Generic.Functions.OpeningFunctionBraceKernighanRitchie"/>
-    <exclude name="Generic.Files.EndFileNoNewline"/>
+    <exclude name="Generic.Formatting.NoSpaceAfterCast.SpaceFound"/>
     <exclude name="Generic.Formatting.MultipleStatementAlignment.NotSameWarning"/>
     <exclude name="Generic.Metrics"/>
     <exclude name="Generic.PHP.ClosingPHPTag.NotFound"/>
     <exclude name="Generic.PHP.UpperCaseConstant.Found"/>
-    <exclude name="Generic.WhiteSpace.DisallowSpaceIndent"/>
     <exclude name="Generic.Strings.UnnecessaryStringConcat.Found"/>
+    <exclude name="Generic.WhiteSpace.DisallowSpaceIndent"/>
   </rule>
   <rule ref="Squiz.Arrays.ArrayBracketSpacing"/>
   <rule ref="Squiz.Classes">
