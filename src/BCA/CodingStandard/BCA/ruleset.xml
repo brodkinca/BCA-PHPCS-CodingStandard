@@ -13,6 +13,7 @@
     <exclude name="PEAR.NamingConventions.ValidVariableName.PrivateNoUnderscore"/>
     <exclude name="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket"/>
     <exclude name="PEAR.Functions.FunctionCallSignature.CloseBracketLine"/>
+    <exclude name="PEAR.Functions.FunctionDeclaration.BraceOnSameLine"/>
   </rule>
   <rule ref="Generic">
     <exclude name="Generic.Arrays.DisallowShortArraySyntax.Found"/>
@@ -47,7 +48,9 @@
     <exclude name="Squiz.ControlStructures.ElseIfDeclaration.NotAllowed"/>
   </rule>
   <rule ref="Squiz.Formatting"/>
-  <rule ref="Squiz.Functions"/>
+  <rule ref="Squiz.Functions">
+    <exclude name="Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine"/>
+  </rule>
   <rule ref="Squiz.NamingConventions">
     <exclude name="Squiz.NamingConventions.ConstantCase.Found"/>
     <exclude name="Squiz.NamingConventions.ValidVariableName.NotCamelCaps"/>
