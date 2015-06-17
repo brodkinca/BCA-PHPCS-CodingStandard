@@ -58,7 +58,9 @@
     <exclude name="Squiz.NamingConventions.ValidFunctionName.PrivateNoUnderscore"/>
     <exclude name="Squiz.NamingConventions.ValidVariableName.PrivateNoUnderscore"/>
   </rule>
-  <rule ref="Squiz.Objects"/>
+  <rule ref="Squiz.Objects">
+    <exclude name="Squiz.Objects.ObjectInstantiation.NotAssigned"/>
+  </rule>
   <rule ref="Squiz.Operators">
     <exclude name="Squiz.Operators.ComparisonOperatorUsage.ImplicitTrue"/>
     <exclude name="Squiz.Operators.ComparisonOperatorUsage.NotAllowed"/>
@@ -66,7 +68,7 @@
   <rule ref="Squiz.PHP"/>
   <rule ref="Squiz.Scope"/>
   <rule ref="Squiz.Strings">
-    <exclude name="Squiz.Strings.ConcatenationSpacing.Missing"/>
+    <exclude name="Squiz.Strings.ConcatenationSpacing"/>
   </rule>
   <rule ref="Squiz.WhiteSpace">
     <exclude name="Squiz.WhiteSpace.FunctionSpacing"/>
@@ -83,6 +85,7 @@
   </rule>
 
   <!-- Test case overrides -->
+  <exclude-pattern>*/tests/**/*Helper.php</exclude-pattern>
   <rule ref="PSR2.Methods.MethodDeclaration.Underscore">
     <exclude-pattern>*/tests/*</exclude-pattern>
   </rule>
