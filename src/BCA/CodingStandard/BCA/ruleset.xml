@@ -92,6 +92,9 @@
   <rule ref="Generic.Classes.DuplicateClassName.Found">
     <exclude-pattern>*/tests/*</exclude-pattern>
   </rule>
+  <rule ref="Squiz.Commenting.ClassComment.TagNotAllowed">
+    <exclude-pattern>*/tests/*</exclude-pattern>
+  </rule>
 
   <!-- Laravel-specific overrides -->
   <rule ref="PSR1.Classes.ClassDeclaration.MissingNamespace">
