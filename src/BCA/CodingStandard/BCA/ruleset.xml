@@ -43,6 +43,7 @@
     <exclude name="Squiz.Commenting.FileComment.ShortFullStop"/>
     <exclude name="Squiz.Commenting.LongConditionClosingComment.Missing"/>
     <exclude name="Squiz.Commenting.FunctionComment.InvalidNoReturn"/>
+    <exclude name="Squiz.Commenting.FunctionComment.MissingParamComment"/>
   </rule>
   <rule ref="Squiz.ControlStructures">
     <exclude name="Squiz.ControlStructures.ElseIfDeclaration.NotAllowed"/>
