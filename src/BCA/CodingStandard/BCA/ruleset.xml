@@ -102,7 +102,7 @@
     <exclude-pattern>*/migrations/*</exclude-pattern>
   </rule>
   <rule ref="Squiz.Classes.ClassFileName.NoMatch">
-    <exclude-pattern>*/app/database/migrations/*</exclude-pattern>
+    <exclude-pattern>*/migrations/*</exclude-pattern>
   </rule>
   <rule ref="Squiz.Commenting.BlockComment.FirstLineIndent">
     <exclude-pattern>*/app/config/*</exclude-pattern>
