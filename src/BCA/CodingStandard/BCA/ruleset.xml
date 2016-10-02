@@ -17,11 +17,13 @@
   </rule>
   <rule ref="Generic">
     <exclude name="Generic.Arrays.DisallowShortArraySyntax.Found"/>
+    <exclude name="Generic.Classes.OpeningBraceSameLine.BraceOnNewLine"/>
     <exclude name="Generic.Files.EndFileNoNewline"/>
     <exclude name="Generic.Files.LowercasedFilename.NotFound"/>
     <exclude name="Generic.Functions.OpeningFunctionBraceKernighanRitchie"/>
     <exclude name="Generic.Formatting.NoSpaceAfterCast.SpaceFound"/>
     <exclude name="Generic.Formatting.MultipleStatementAlignment.NotSameWarning"/>
+    <exclude name="Generic.Formatting.SpaceAfterNot.Incorrect"/>
     <exclude name="Generic.Metrics"/>
     <exclude name="Generic.PHP.ClosingPHPTag.NotFound"/>
     <exclude name="Generic.PHP.UpperCaseConstant.Found"/>
